@@ -14,40 +14,16 @@
         <meta property="og:type" content="website">
         <link rel="icon" type="image/svg+xml" href="./media/favicon.svg" />
         <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
+
+        <script>
+            const image = Math.floor(Math.random() * 6) + 1
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = '/media/' + image + '.jpg'
+            document.head.appendChild(link)
+        </script>
     </head>
-    <body>
-        <header>
-            <a class="icon" href="https://github.com/tommyalden">
-                <i class="fa-brands fa-github github icon" /></i>
-            </a>
-            <h1 class="header-title"><a href="/" style="color: var(--text); text-decoration: none;">Tommy Alden</a></h1>
-        </header>
-        <main>
-            <img id="image" alt="Random Photo" />
-
-            <script>
-                const image = Math.floor(Math.random() * 6) + 1;
-
-                document.getElementById("image").src = "./media/" + image + ".jpg"
-            </script>
-
-            <p class="current-role">1st Year Computer Science Student at the University of Bristol.</p>
-            <div class="icons">
-                <a class="icon" href="./tommyalden-cv.pdf">
-                    <i class="fa-solid fa-file-lines fa-2x icon"></i>
-                </a> 
-                <a class="icon" href="mailto:tommy@talden.dev">
-                    <i class="fa-solid fa-envelope fa-2x icon"></i>
-                </a> 
-                <a class="icon" href="https://linkedin.com/in/tommy-alden">
-                    <i class="fa-brands fa-linkedin fa-2x icon"></i>
-                </a>
-                <a class="icon" href="https://x.com/talden_">
-                    <i class="fa-brands fa-twitter fa-2x icon"></i>
-                </a>
-            </div>
-        </main>
-    </body>
     <style>
         :root {
             --bg: #ffffff;
@@ -148,4 +124,36 @@
             transform: translatey(-2px);
         }
     </style>
+    <body>
+        <header>
+            <a class="icon" href="https://github.com/tommyalden">
+                <i class="fa-brands fa-github github icon" /></i>
+            </a>
+            <h1 class="header-title"><a href="/" style="color: var(--text); text-decoration: none;">Tommy Alden</a></h1>
+        </header>
+        <main>
+            <img id="image" alt="Random Photo" />
+
+            <script>
+                document.getElementById("image").src = "./media/" + image + ".jpg"
+            </script>
+
+            <p class="current-role">1st Year Computer Science Student at the University of Bristol.</p>
+            <div class="icons">
+                <a class="icon" href="./media/tommyalden-cv.pdf">
+                    <i class="fa-solid fa-file-lines fa-2x icon"></i>
+                </a> 
+                <a class="icon" href="mailto:tommy@talden.dev">
+                    <i class="fa-solid fa-envelope fa-2x icon"></i>
+                </a> 
+                <a class="icon" href="https://linkedin.com/in/tommy-alden">
+                    <i class="fa-brands fa-linkedin fa-2x icon"></i>
+                </a>
+                <a class="icon" href="https://x.com/talden_">
+                    <i class="fa-brands fa-twitter fa-2x icon"></i>
+                </a>
+            </div>
+        </main>
+    </body>
+    
 </html>
