@@ -16,7 +16,9 @@
         <link rel="icon" type="image/x-icon" href="./media/favicon.ico">
 
         <script>
-            const image = Math.floor(Math.random() * 6) + 1
+            const imageCount = 6
+            
+            const image = Math.floor(Math.random() * imageCount) + 1
             const link = document.createElement('link');
             link.rel = 'preload';
             link.as = 'image';
@@ -138,7 +140,7 @@
                 document.getElementById("image").src = "./media/" + image + ".jpg"
             </script>
 
-            <p class="current-role">1st Year Computer Science Student at the University of Bristol.</p>
+            <p class="current-role">2nd Year Computer Science Student at the University of Bristol.</p>
             <div class="icons">
                 <a class="icon" href="./media/tommyalden-cv.pdf">
                     <i class="fa-solid fa-file-lines fa-2x icon"></i>
